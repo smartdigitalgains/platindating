@@ -35,20 +35,17 @@ class Compiler
 
 
     //RENDER VIEW ELEMENTS
-
-    print_r($model->elements);
-
     foreach($model->elements as $rows){
 
       echo'
-      <div class"row>
+      <div class"row">
       ';
 
 
       foreach($rows as $col){
 
         echo '
-        <div class="col>
+        <div class="col">
         ';
         
         foreach($col as $element){
