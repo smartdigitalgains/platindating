@@ -103,7 +103,8 @@ class Compiler
         }
 
         echo'
-        </div>'
+        </div>
+        ';
 
       }
 
