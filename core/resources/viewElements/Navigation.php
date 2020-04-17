@@ -16,10 +16,25 @@ class Navigation
 
   public function render(){
 
+    echo '
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+    ';
+    
     foreach ($_SESSION['routes'] as  $route) {
-      echo '<a href="/'.$route->slug.'">'.$route->label.'</a><br>';
+      echo '<li class="nav-item active"><a href="/'.$route->slug.'">'.$route->label.'</a></<a>';
     }
-
+    
+    echo'
+    </ul>
+    </div>
+    </nav>
+    ';
   }
 
 }

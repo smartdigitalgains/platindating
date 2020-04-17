@@ -24,6 +24,7 @@ class DefaultTemplate{
             "/assets/js/toast.min.js",
         ];
 
+
     }
 
 }

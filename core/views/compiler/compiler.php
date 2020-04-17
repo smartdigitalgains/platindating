@@ -40,6 +40,26 @@ class Compiler
     echo'
     </head>
     <body>
+    ';
+
+    foreach($model->topElements as $element){
+
+      $reflect = \Core\Utilities::reflect($element);
+
+      switch($reflect['namespaceName']){
+
+        case 'Core\Resources\ViewElements':
+          $element->render();
+        break;
+
+        case 'Core\Resources\Forms':
+          \Core\Forms\Controller::render($element);
+        break;
+
+      }
+    }
+    
+    echo'
     <div class="container-fluid">
     ';
 
