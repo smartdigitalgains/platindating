@@ -1,5 +1,5 @@
 <?php
-Namespace Core\Router\Routes;
+Namespace Core\Resources\Routes;
 
 /**
  *
