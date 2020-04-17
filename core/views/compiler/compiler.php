@@ -20,7 +20,7 @@ class Compiler
     <!doctype html>
     <head lang="en">
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     ';
 
     foreach($model->template->externalJs as $extJs){
@@ -58,46 +58,52 @@ class Compiler
 
       }
     }
-    
-    echo'
-    <div class="container-fluid">
-    ';
 
-    //RENDER VIEW ELEMENTS
-    foreach($model->elements as $rows){
 
-      echo'
-      <div class="row">
+    foreach($mode->gridElements as $key => $container){
+
+      echo '
+      <div class="'.implode(', ', $container['classes']).'">
       ';
 
-
-      foreach($rows as $col){
+      foreach($container['rows'] as $key => $row){
 
         echo '
-        <div class="col p-2">
+        <div class="row '.implode(', ', $row['classes']).'">
         ';
-        
-        foreach($col as $element){
 
-          $reflect = \Core\Utilities::reflect($element);
-    
-          switch($reflect['namespaceName']){
-    
-            case 'Core\Resources\ViewElements':
-              $element->render();
-            break;
-    
-            case 'Core\Resources\Forms':
-              \Core\Forms\Controller::render($element);
-            break;
-    
-          }
-    
-        }    
-        
+
+        foreach($row as $key => $col){
+
+          echo '
+          <div class="col '.implode(', ', $col['classes']).'">
+          ';
+
+          foreach($col as $element){
+
+            $reflect = \Core\Utilities::reflect($element);
+
+            switch($reflect['namespaceName']){
+
+              case 'Core\Resources\ViewElements':
+                $element->render();
+              break;
+
+              case 'Core\Resources\Forms':
+                \Core\Forms\Controller::render($element);
+              break;
+
+            }
+
+
+          echo'
+          </div>
+          ';
+
+        }
+
         echo'
-        </div>
-        ';
+        </div>'
 
       }
 
@@ -107,10 +113,7 @@ class Compiler
 
     }
 
-    echo '
-    </div>
-    ';
-  
+
     echo'
     </body>
     ';
