@@ -38,7 +38,7 @@ class Compiler
     foreach($model->elements as $rows){
 
       echo'
-      <div class"row">
+      <div class="row">
       ';
 
 
