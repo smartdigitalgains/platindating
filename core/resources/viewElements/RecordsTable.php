@@ -22,8 +22,8 @@ class RecordsTable
 
       echo '
       <div class="container">
-      <table class="table">
-        <thead>
+      <table class="table table-hover">
+        <thead class="thead-dark">
         <tr>
       ';
 
