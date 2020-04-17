@@ -60,7 +60,7 @@ class Compiler
     }
 
 
-    print_r($mode->gridElements);
+    print_r($model->gridElements);
 
     foreach($model->gridElements['container'] as $key => $container){
 
