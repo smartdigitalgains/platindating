@@ -24,10 +24,11 @@ class SelectBox
   {
 
     $repositories = \Core\Models\Controller::getRepositories($this->populate['model']);
-
     echo '
-    <select name="data['.$this->name.']" class="'.$this->classes.'">
-      <option selected disabled>'.$this->label.'</option>
+    <div class="form-group">
+      <label for="data['.$this->name.']">'.$this->label.'</label>
+      <select class="form-control" name="data['.$this->name.']" class="'.$this->classes.'">
+        <option selected disabled>'.$this->label.'</option>
     ';
 
     if(!empty($repositories)){
@@ -38,7 +39,9 @@ class SelectBox
 
     echo'
     </select>
+    </div>
     ';
+
   }
 
 }

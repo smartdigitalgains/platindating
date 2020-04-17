@@ -21,7 +21,12 @@ class TextArea
 
   public function render($value)
   {
-    echo '<textarea placeholder="'.$this->label.'" name="data['.$this->name.']" class="'.$this->classes.'">'.$value.'</textarea>';
+    echo '
+    <div class="form-group">
+      <label for="data['.$this->name.']">'.$this->label.'</label>
+      <textarea class="form-control" placeholder="'.$this->label.'" name="data['.$this->name.']" class="'.$this->classes.'">'.$value.'</textarea>
+    </div>
+    ';
   }
 
 }
