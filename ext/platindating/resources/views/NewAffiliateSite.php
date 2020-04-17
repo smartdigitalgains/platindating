@@ -29,13 +29,13 @@ class NewAffiliateSite
         "rows" => [
           "cols" => [
             [
-              "class" => "p-2",
+              "class" => "p-",
               "elements" => [
                 new \Core\Resources\Forms\AffiliateSites(),
               ]
             ],
             [
-              "class" => "p-2",
+              "class" => "p-3",
               "elements" => [
                 new RecordsTable([
                   "model" => "\Core\Resources\Forms\AffiliateSites",
@@ -47,20 +47,6 @@ class NewAffiliateSite
           ]
         ]
       ]
-    ];
-
-    $this->elements = [
-        [
-          [
-            new \Core\Resources\Forms\AffiliateSites(),
-          ],
-          [
-            new RecordsTable([
-              "model" => "\Core\Resources\Forms\AffiliateSites",
-              "fields" => ["title"]
-            ]),
-          ],
-        ]
     ];
 
   }
