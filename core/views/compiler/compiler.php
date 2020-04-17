@@ -26,6 +26,9 @@ class Compiler
     foreach($model->template->externalCss as $extCss){
       echo "<link rel='stylesheet' href='".$extCss."' />";
     }
+    foreach($model->template->inernalCss as $extCss){
+      echo "<link rel='stylesheet' href='".$extCss."' />";
+    }
 
     echo'
     </head>
@@ -82,6 +85,9 @@ class Compiler
     ';
     
     foreach($model->template->externalJs as $extJs){
+      echo "<script src='".$extJs."'></script>";
+    }
+    foreach($model->template->internalJs as $extJs){
       echo "<script src='".$extJs."'></script>";
     }
   
