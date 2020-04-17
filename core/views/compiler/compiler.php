@@ -35,6 +35,9 @@ class Compiler
 
 
     //RENDER VIEW ELEMENTS
+
+    print_r($model->elements);
+
     foreach($model->elements as $rows){
 
       echo'
