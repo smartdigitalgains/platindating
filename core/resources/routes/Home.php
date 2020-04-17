@@ -18,7 +18,7 @@ class Home
 
   public function route()
   {
-    echo 'test';
+    
     (new \Core\Views\Controller('\Core\Resources\Views\Home'))->render();
 
   }

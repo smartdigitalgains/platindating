@@ -1,5 +1,5 @@
 <?php
-Namespace Core\Models\Forms;
+Namespace Core\Resources\Forms;
 
 use \Core\Resources\FormElements\TextArea;
 use \Core\Resources\FormElements\TextInput;

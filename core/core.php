@@ -8,7 +8,40 @@ class Core
   static function load()
   {
 
+    self::loadCore();
+    self::loadExt();
+
+  }
+
+  function loadCore()
+  {
+
     $dir = new RecursiveDirectoryIterator(__DIR__);
+
+    foreach (new RecursiveIteratorIterator($dir) as $file) {
+
+      if (!is_dir($file)) {
+
+        if( fnmatch('*.php', $file) && !strpos($file, 'core.php')){
+
+          $files[] = $file;
+
+        }
+
+      }
+
+    }
+
+    foreach(array_reverse($files) as $file){
+      include_once $file;
+    }
+
+  }
+
+  function loadExt()
+  {
+
+    echo $dir = new RecursiveDirectoryIterator(dir(__DIR__));
 
     foreach (new RecursiveIteratorIterator($dir) as $file) {
 
