@@ -1,8 +1,8 @@
 <?php
 Namespace Core\Forms\Modules;
 
-use \Core\Models\FormElements\Submit;
-use \Core\Models\FormElements\Hidden;
+use \Core\Resources\FormElements\Submit;
+use \Core\Resources\FormElements\Hidden;
 /**
  *
  */
