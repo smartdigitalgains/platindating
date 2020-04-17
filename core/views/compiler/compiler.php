@@ -69,15 +69,11 @@ class Compiler
 
       foreach($container['rows'] as $key => $row){
 
-        echo '<pre>';
-        print_r($row);
-        exit;
-
         echo '
         <div class="row">
         ';
 
-        foreach($row['cols'] as $key => $col){
+        foreach($row as $key => $col){
 
           echo '
           <div class="col '.$container['class'].'">
