@@ -8,7 +8,7 @@ class Core
   static function load()
   {
 
-    // self::loadCore();
+    self::loadCore();
     self::loadExt();
 
   }
@@ -41,7 +41,7 @@ class Core
   static function loadExt()
   {
 
-    $dir = new RecursiveDirectoryIterator(dirname(__DIR__));
+    $dir = new RecursiveDirectoryIterator(dirname(__DIR__).'/ext/');
 
     foreach (new RecursiveIteratorIterator($dir) as $file) {
 
