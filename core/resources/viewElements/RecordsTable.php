@@ -21,6 +21,7 @@ class RecordsTable
     if($records = \Core\Models\Controller::getRepositories($this->model)){
 
       echo '
+      <div class="container">
       <h2>'.\Core\Models\Controller::getShortName($this->model).'</h2>
       <table class="table">
         <thead>
@@ -77,6 +78,7 @@ class RecordsTable
       echo'
         </tbody>
       </table>
+      </div>
       ';
 
     }
