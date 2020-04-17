@@ -80,6 +80,13 @@ class Compiler
 
     echo '
     </div>
+    ';
+    
+    foreach($model->template->externalJs as $extJs){
+      echo "<script src='".$extJs."'></script>";
+    }
+    
+    echo'
     </body>
     ';
 
