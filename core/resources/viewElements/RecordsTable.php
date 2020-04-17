@@ -33,6 +33,7 @@ class RecordsTable
       }
 
       echo'
+      <td>Controls</td>
       </tr>
       </thead>
       <tbody>
