@@ -75,8 +75,8 @@ class Compiler
         <div class="row '.$container['class'].'">
         ';
 
+        echo '<pre>';
         print_r($row); exit;
-
 
         foreach($row['cols'] as $key => $col){
 
