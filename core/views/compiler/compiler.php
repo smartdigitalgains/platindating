@@ -26,7 +26,7 @@ class Compiler
     foreach($model->template->externalCss as $extCss){
       echo "<link rel='stylesheet' href='".$extCss."' />";
     }
-    foreach($model->template->inernalCss as $extCss){
+    foreach($model->template->internalCss as $extCss){
       echo "<link rel='stylesheet' href='".$extCss."' />";
     }
 
