@@ -44,7 +44,7 @@ class Query
 
     $stmt .= "FROM ".$qb->get('prefix').'_'.lcfirst(\Core\Models\Controller::getShortName($model));
 
-    if($q = $qb->connect()->prepare($stmt)->execute()){
+    if($q = $qb->connect()->query($stmt)){
       return $q->fetchAll(\PDO::FETCH_ASSOC);
     }
   }
