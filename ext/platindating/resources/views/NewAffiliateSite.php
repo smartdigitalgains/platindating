@@ -29,7 +29,7 @@ class NewAffiliateSite
         "rows" => [
           "cols" => [
             [
-              "class" => "p-",
+              "class" => "p-3 bg-light",
               "elements" => [
                 new \Core\Resources\Forms\AffiliateSites(),
               ]
