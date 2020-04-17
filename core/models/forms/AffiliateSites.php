@@ -24,11 +24,11 @@ class AffiliateSites
 
     $this->schema = [
       [
-        "column" => "titel",
+        "column" => "title",
         "type" => "TEXT CHARACTER SET utf8 COLLATE utf8_bin"
       ],
       [
-        "column" => "affiliateLink",
+        "column" => "affiliateUrl",
         "type" => "TEXT CHARACTER SET utf8 COLLATE utf8_bin"
       ],
       [
@@ -44,15 +44,15 @@ class AffiliateSites
         "type" => "TEXT CHARACTER SET utf8 COLLATE utf8_bin"
       ],
       [
-        "column" => "userAge",
+        "column" => "ageOfUsers",
         "type" => "TEXT CHARACTER SET utf8 COLLATE utf8_bin"
       ],
       [
-        "column" => "onlineUser",
+        "column" => "userCount",
         "type" => "TEXT CHARACTER SET utf8 COLLATE utf8_bin"
       ],
       [
-        "column" => "platformAds",
+        "column" => "plattformHasAds",
         "type" => "TEXT CHARACTER SET utf8 COLLATE utf8_bin"
       ],
       [
@@ -63,51 +63,51 @@ class AffiliateSites
 
     $this->elements = [
       new TextInput([
-        "name" => "titel",
+        "name" => "title",
         "label" => "Name des Portals",
         "restrictions" => [new Required()]
       ]),
       new TextInput([
-        "name" => "affiliateLink",
-        "label" => "Affiliate Link",
+        "name" => "affiliateUrl",
+        "label" => "Die Affiliate Url",
         "restrictions" => [new Required()]
       ]),
       new TextArea([
         "name" => "description",
-        "label" => "Description",
+        "label" => "Bescheibung",
         "restrictions" => [new Required()]
       ]),
       new TextInput([
         "name" => "rating",
-        "label" => "Rating",
+        "label" => "Bewertung",
         "restrictions" => [new Required()]
       ]),
       new TextInput([
         "name" => "freeRegistration",
-        "label" => "Free Registration?",
+        "label" => "Registrierung kostenlos?",
         "restrictions" => [new Required()]
       ]),
       new TextInput([
-        "name" => "userAge",
-        "label" => "User Age",
+        "name" => "ageOfUsers",
+        "label" => "Durchschnittliches Alter der Benutzer",
         "restrictions" => [new Required()]
       ]),
       new TextInput([
-        "name" => "onlineUser",
-        "label" => "Online User",
+        "name" => "userCount",
+        "label" => "Anzahl aktiver Benutzer",
         "restrictions" => [
             new Required(),
             new IsInt()
         ]
       ]),
       new TextInput([
-        "name" => "platformAds",
-        "label" => "Platform Ads",
+        "name" => "plattformHasAds",
+        "label" => "Zeigt die Plattform Werbung an?",
         "restrictions" => [new Required()]
       ]),
       new TextInput([
         "name" => "categories",
-        "label" => "Categories",
+        "label" => "Kategorien",
         "restrictions" => [new Required()]
       ]),
     ];
