@@ -64,7 +64,7 @@ class AffiliateSites
     $this->elements = [
       new TextInput([
         "name" => "titel",
-        "label" => "Titel",
+        "label" => "Name des Portals",
         "restrictions" => [new Required()]
       ]),
       new TextInput([
