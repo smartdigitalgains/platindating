@@ -43,33 +43,12 @@ class RecordsTable
           echo '<td>'.$val.'</td>';
         }
 
-        if($this->actions){
-
-          foreach($this->actions as $key => $action){
-
-            if($action){
-
-              switch ($key) {
-
-                case 'view':
-
-                  echo '<td><a href="'.$column['uid'].'">View</a></td>';
-
-                break;
-
-                case 'delete':
-
-                echo '<td><a href="'.$column['uid'].'">Delete</a></td>';
-
-                break;
-
-              }
-
-            }
-
-          }
-
-        }
+        echo '
+        <td>
+          <button type="button" class="btn btn-primary">Bearbeiten</button>
+          <button type="button" class="btn btn-danger">Löschen</button>
+        </td>
+        ';
 
         echo '</tr>';
       }
