@@ -15,7 +15,6 @@ class Compiler
   static function compile($model)
   {
 
-    print_r($model);
 
     foreach($model->elements as $element){
 
@@ -23,12 +22,11 @@ class Compiler
 
       switch($reflect['namespaceName']){
 
-        case 'Core\Models\ViewElements':
-          echo 'test';
+        case 'Core\Resources\ViewElements':
           $element->render();
         break;
 
-        case 'Core\Models\Forms':
+        case 'Core\Resources\Forms':
           \Core\Forms\Controller::render($element);
         break;
 
