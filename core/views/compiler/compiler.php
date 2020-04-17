@@ -66,20 +66,20 @@ class Compiler
 
 
       echo '
-      <div class="'.implode(', ', $container['class']).'">
+      <div class="'.$container['class'].'">
       ';
 
       foreach($container['rows'] as $key => $row){
 
         echo '
-        <div class="row '.implode(', ', $row['class']).'">
+        <div class="row '.$container['class'].'">
         ';
 
 
         foreach($row['cols'] as $key => $col){
 
           echo '
-          <div class="col '.implode(', ', $col['class']).'">
+          <div class="col '.$container['class'].'">
           ';
 
           foreach($col['elements'] as $element){
