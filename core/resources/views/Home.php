@@ -16,6 +16,8 @@ class Home
   function __construct()
   {
 
+    echo 'twst';
+
     $this->elements = [
       new BackLink(),
       new WelcomeMessage(),
