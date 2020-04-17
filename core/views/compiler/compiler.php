@@ -73,13 +73,13 @@ class Compiler
         ';
 
 
-        foreach($row as $key => $col){
+        foreach($row['cols'] as $key => $col){
 
           echo '
           <div class="col '.implode(', ', $col['classes']).'">
           ';
 
-          foreach($col as $element){
+          foreach($col['elements'] as $element){
 
             $reflect = \Core\Utilities::reflect($element);
 
