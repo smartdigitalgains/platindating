@@ -19,7 +19,7 @@ class NewAffiliateSite
     $this->elements = [
         new \Core\Resources\Forms\AffiliateSites(),
         new RecordsTable([
-          "model" => "\Core\Resources\AffiliateSites"
+          "model" => "\Core\Resources\Forms\AffiliateSites"
         ]),
     ];
 
