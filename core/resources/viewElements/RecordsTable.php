@@ -22,7 +22,7 @@ class RecordsTable
 
       echo '
       <div class="container">
-      <table class="table table-dark table-hover">
+      <table class="table table-dark table-hover table-responsive">
       <thead class="thead-dark">
       <tr>
       ';
