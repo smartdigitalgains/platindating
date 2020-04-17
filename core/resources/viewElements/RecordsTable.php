@@ -23,8 +23,8 @@ class RecordsTable
       echo '
       <div class="container">
       <table class="table table-hover">
-        <thead class="thead-dark">
-        <tr>
+      <thead class="thead-dark">
+      <tr>
       ';
 
       foreach($records[0] as $key => $val){
@@ -32,9 +32,9 @@ class RecordsTable
       }
 
       echo'
-        </tr>
-        </thead>
-          <tbody>
+      </tr>
+      </thead>
+      <tbody>
       ';
 
       foreach($records as $column){
