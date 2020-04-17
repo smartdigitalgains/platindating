@@ -23,7 +23,7 @@ class Query
   {
     $qb = new \Core\Connection();
 
-    if($q = $qb->connect()->query("SELECT * FROM ".$qb->get('prefix').'_'.lcfirst(self::getShortName($model)))){
+    if($q = $qb->connect()->query("SELECT * FROM ".$qb->get('prefix').'_'.lcfirst(\Core\Models\Controller::getShortName($model)))){
       return $q->fetchAll(\PDO::FETCH_ASSOC);
     }
   }
@@ -42,7 +42,7 @@ class Query
 
     }
 
-    $stmt .= "FROM ".$qb->get('prefix').'_'.lcfirst(self::getShortName($model));
+    $stmt .= "FROM ".$qb->get('prefix').'_'.lcfirst(\Core\Models\Controller::getShortName($model));
 
     if($q = $qb->connect()->prepare($stmt)->execute()){
       return $q->fetchAll(\PDO::FETCH_ASSOC);
