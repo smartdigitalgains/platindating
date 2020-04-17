@@ -60,11 +60,12 @@ class Compiler
     }
 
 
-    print_r($model->gridElements);
+    // print_r($model->gridElements);
 
     foreach($model->gridElements['container'] as $key => $container){
 
       print_r($container);
+      exit;
 
       echo '
       <div class="'.implode(', ', $container['class']).'">
