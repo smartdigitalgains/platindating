@@ -22,7 +22,6 @@ class RecordsTable
 
       echo '
       <div class="container">
-      <h2>'.\Core\Models\Controller::getShortName($this->model).'</h2>
       <table class="table">
         <thead>
         <tr>

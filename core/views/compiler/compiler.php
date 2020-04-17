@@ -45,7 +45,7 @@ class Compiler
       foreach($rows as $col){
 
         echo '
-        <div class="col">
+        <div class="col p-2">
         ';
         
         foreach($col as $element){
