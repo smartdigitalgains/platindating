@@ -24,6 +24,7 @@ class Compiler
       switch($reflect['namespaceName']){
 
         case 'Core\Models\ViewElements':
+          echo 'test';
           $element->render();
         break;
 
