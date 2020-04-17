@@ -1,5 +1,5 @@
 <?php
-Namespace Core\Models\ViewElements;
+Namespace Core\Resources\ViewElements;
 
 /**
  *
