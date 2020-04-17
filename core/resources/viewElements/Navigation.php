@@ -17,7 +17,7 @@ class Navigation
   public function render(){
 
     echo '
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@ class Navigation
     ';
     
     foreach ($_SESSION['routes'] as  $route) {
-      echo '<li class="nav-item active"><a href="/'.$route->slug.'">'.$route->label.'</a></<a>';
+      echo '<li class="nav-item active"><a href="/'.$route->slug.'">'.$route->label.'</a></li>';
     }
     
     echo'
