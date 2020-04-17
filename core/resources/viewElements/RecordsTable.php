@@ -22,7 +22,7 @@ class RecordsTable
 
       echo '
       <h2>'.\Core\Models\Controller::getShortName($this->model).'</h2>
-      <table>
+      <table class="table">
         <thead>
         <tr>
       ';
