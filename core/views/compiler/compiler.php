@@ -89,6 +89,7 @@ class Compiler
 
     <script>
     $(document).ready(function(){
+      console.log("log");
       $(".toast").toast();
     })
     </script>
