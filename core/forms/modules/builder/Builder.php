@@ -16,7 +16,9 @@ class Builder
   static function build($model)
   {
 
-    echo '<form action="'.$_SERVER['REQUEST_URI'].'" method="post">';
+    echo '
+    <div class="container">
+    <form action="'.$_SERVER['REQUEST_URI'].'" method="post">';
 
     //Set Cross Site Security Token
     Tokens::newToken();
@@ -37,7 +39,10 @@ class Builder
       "value" => \Core\Models\Controller::getShortName($model)
     ]))->render();
 
-    echo '</form>';
+    echo '
+    </form>
+    </div>
+    ';
 
   }
 

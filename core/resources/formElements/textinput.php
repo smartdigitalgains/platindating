@@ -25,7 +25,7 @@ class TextInput
     <div class="form-group">
       <label for="data['.$this->name.']">'.$this->label.'</label>
       <input class="form-control" type="text" value="'.$value.'" placeholder="'.$this->label.'" name="data['.$this->name.']" class="'.$this->classes.'" />
-      </div>
+    </div>
     ';
 
   }
