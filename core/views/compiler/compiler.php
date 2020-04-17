@@ -84,8 +84,15 @@ class Compiler
     foreach($model->template->externalJs as $extJs){
       echo "<script src='".$extJs."'></script>";
     }
-    
+  
     echo'
+
+    <script>
+    $(document).ready(function(){
+      $(".toast").toast();
+    })
+    </script>
+
     </body>
     ';
 
