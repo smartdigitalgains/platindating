@@ -15,6 +15,8 @@ class Compiler
   static function compile($model)
   {
 
+    print_r($model);
+
     foreach($model->elements as $element){
 
       $reflect = \Core\Utilities::reflect($element);
