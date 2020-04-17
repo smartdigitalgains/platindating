@@ -12,7 +12,7 @@ class Tasks
 
   function __construct()
   {
-    $this->slug = "home";
+    $this->slug = "";
     $this->label = "Home";
   }
 
