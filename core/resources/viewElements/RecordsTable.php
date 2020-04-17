@@ -18,7 +18,7 @@ class RecordsTable
   public function render()
   {
 
-    if($records = \Core\Models\Controller::getRepositories($this->model)){
+    if($records = \Core\Db\Query::findAll($this->model)){
 
       echo '
       <div class="container table-responsive">

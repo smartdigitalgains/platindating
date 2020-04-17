@@ -1,5 +1,5 @@
 <?php
-Namespace Core;
+Namespace Core\Db;
 /**
  *
  */

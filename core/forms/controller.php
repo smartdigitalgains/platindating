@@ -1,6 +1,6 @@
 <?php
 Namespace Core\Forms;
-use Core\Migrate;
+use Core\Db\Migrate;
 
 /**
  * Forms
