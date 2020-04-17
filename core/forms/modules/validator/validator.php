@@ -59,7 +59,22 @@ class Validator
   static function errorInfo()
   {
     foreach($_SESSION['core']['forms']['validator']['errors'] as $e){
-      echo $e.'<br>';
+      
+      echo'
+      <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+        <div class="toast" style="position: absolute; top: 0; right: 0;">
+          <div class="toast-header">
+            <strong class="mr-auto">c0r3</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            '.$e.'
+          </div>
+        </div>
+      </div>
+      ';
     }
     unset($_SESSION['core']['forms']['validator']['errors']);
   }
