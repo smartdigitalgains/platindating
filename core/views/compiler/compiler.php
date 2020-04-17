@@ -23,6 +23,13 @@ class Compiler
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
     ';
 
+    foreach($model->template->externalJs as $extJs){
+      echo "<script src='".$extJs."'></script>";
+    }
+    foreach($model->template->internalJs as $extJs){
+      echo "<script src='".$extJs."'></script>";
+    }
+
     foreach($model->template->externalCss as $extCss){
       echo "<link rel='stylesheet' href='".$extCss."' />";
     }
@@ -83,23 +90,8 @@ class Compiler
     echo '
     </div>
     ';
-    
-    foreach($model->template->externalJs as $extJs){
-      echo "<script src='".$extJs."'></script>";
-    }
-    foreach($model->template->internalJs as $extJs){
-      echo "<script src='".$extJs."'></script>";
-    }
   
     echo'
-
-    <script>
-    $(document).ready(function(){
-      console.log("log");
-      $(".toast").toast();
-    })
-    </script>
-
     </body>
     ';
 
