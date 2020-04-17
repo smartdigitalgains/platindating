@@ -13,7 +13,7 @@ class Core
 
   }
 
-  function loadCore()
+  static function loadCore()
   {
 
     $dir = new RecursiveDirectoryIterator(__DIR__);
@@ -38,10 +38,10 @@ class Core
 
   }
 
-  function loadExt()
+  static function loadExt()
   {
 
-    echo $dir = new RecursiveDirectoryIterator(dir(__DIR__));
+    echo $dir = new RecursiveDirectoryIterator(dirname(__DIR__));
 
     foreach (new RecursiveIteratorIterator($dir) as $file) {
 
