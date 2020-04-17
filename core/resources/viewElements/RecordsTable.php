@@ -13,12 +13,13 @@ class RecordsTable
   {
     $this->model = new $data['model'];
     $this->actions = ((isset($data['actions']) ) ? $data['actions'] : NULL);
+    $this->fields = ((isset($data['fields']) ) ? $data['fields'] : NULL);
   }
 
   public function render()
   {
 
-    if($records = \Core\Db\Query::findAll($this->model)){
+    if($records = \Core\Db\Query::select($this->model, $this->fields)){
 
       echo '
       <div class="container table-responsive">
