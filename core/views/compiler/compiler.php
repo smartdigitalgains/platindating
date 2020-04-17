@@ -76,7 +76,7 @@ class Compiler
         foreach($row as $key => $col){
 
           echo '
-          <div class="col '.$container['class'].'">
+          <div class="col '.$col['class'].'">
           ';
 
           foreach($col['elements'] as $element){
@@ -95,12 +95,7 @@ class Compiler
 
             }
 
-
-          echo'
-          </div>
-          ';
-
-        }
+          }
 
         echo'
         </div>
