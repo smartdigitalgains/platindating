@@ -23,10 +23,12 @@ class NewAffiliateSite
         [
           [
             new \Core\Resources\Forms\AffiliateSites(),
+          ],
+          [
             new RecordsTable([
               "model" => "\Core\Resources\Forms\AffiliateSites"
             ]),    
-          ]
+          ],
         ]
     ];
 
