@@ -8,7 +8,7 @@ class Core
   static function load()
   {
 
-    self::loadCore();
+    // self::loadCore();
     self::loadExt();
 
   }
