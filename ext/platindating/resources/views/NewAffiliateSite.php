@@ -31,7 +31,7 @@ class NewAffiliateSite
           [
             new RecordsTable([
               "model" => "\Core\Resources\Forms\AffiliateSites",
-              "fields" => ["title", "description"]
+              "fields" => ["title"]
             ]),
           ],
         ]
