@@ -19,7 +19,7 @@ class Submit
 
   public function render()
   {
-    echo '<button type="submit" name="submit" value="'.$this->value.'" class="'.$this->classes.'">'.$this->label.'</button>';
+    echo '<button class="btn btn-primary" type="submit" name="submit" value="'.$this->value.'" class="'.$this->classes.'">'.$this->label.'</button>';
   }
 
 }
