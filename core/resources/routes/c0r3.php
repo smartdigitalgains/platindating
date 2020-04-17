@@ -12,14 +12,14 @@ class Tasks
 
   function __construct()
   {
-    $this->slug = "home";
-    $this->label = "Home";
+    $this->slug = "c0r3";
+    $this->label = "c0re3 Admin";
   }
 
   public function route()
   {
-    
-    (new \Core\Views\Controller('\Core\Resources\Views\Home'))->render();
+  
+    echo 'admin interface';
 
   }
 
