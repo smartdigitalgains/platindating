@@ -10,7 +10,7 @@ class Core
 
     self::loadCore();
     self::loadExt();
-
+    //end load core
   }
 
   static function loadCore()
