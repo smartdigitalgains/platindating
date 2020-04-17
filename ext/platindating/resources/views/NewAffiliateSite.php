@@ -47,7 +47,7 @@ class NewAffiliateSite
           ]
         ]
       ]
-    ]
+    ];
 
     $this->elements = [
         [
