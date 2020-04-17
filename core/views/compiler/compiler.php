@@ -31,8 +31,8 @@ class Compiler
     echo'
     </html>
     <body>
+    <div class="container-fluid">
     ';
-
 
     //RENDER VIEW ELEMENTS
     foreach($model->elements as $rows){
@@ -79,6 +79,7 @@ class Compiler
     }
 
     echo '
+    </div>
     </body>
     ';
 
