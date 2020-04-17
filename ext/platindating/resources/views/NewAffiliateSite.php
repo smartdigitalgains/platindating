@@ -23,6 +23,32 @@ class NewAffiliateSite
       new Navigation()
     ];
 
+    $this->gridElements = [
+      "container" => [
+        "class" => "container-fluid",
+        "rows" => [
+          "cols" => [
+            [
+              "class" => "pd-2",
+              "elements" => [
+                new \Core\Resources\Forms\AffiliateSites(),
+              ]
+            ],
+            [
+              "class" => "pd-2",
+              "elements" => [
+                new RecordsTable([
+                  "model" => "\Core\Resources\Forms\AffiliateSites",
+                  "fields" => ["title"]
+                ]),
+
+              ]
+            ],
+          ]
+        ]
+      ]
+    ]
+
     $this->elements = [
         [
           [
