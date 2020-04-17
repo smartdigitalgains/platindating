@@ -33,7 +33,7 @@ class RecordsTable
       }
 
       echo'
-      <td>Controls</td>
+      <td>Aktionen</td>
       </tr>
       </thead>
       <tbody>
