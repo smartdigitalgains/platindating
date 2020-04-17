@@ -29,13 +29,13 @@ class NewAffiliateSite
         "rows" => [
           "cols" => [
             [
-              "class" => "pd-2",
+              "class" => "p-2",
               "elements" => [
                 new \Core\Resources\Forms\AffiliateSites(),
               ]
             ],
             [
-              "class" => "pd-2",
+              "class" => "p-2",
               "elements" => [
                 new RecordsTable([
                   "model" => "\Core\Resources\Forms\AffiliateSites",
