@@ -12,7 +12,7 @@ class Home
 
   function __construct()
   {
-    $this->slug = "";
+    $this->slug = "/";
     $this->label = "Home";
   }
 
