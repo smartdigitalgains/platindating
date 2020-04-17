@@ -21,6 +21,8 @@ class RecordsTable
 
     if($records = \Core\Db\Query::select($this->model, $this->fields)){
 
+      print_r($records);
+
       echo '
       <div class="container table-responsive">
       <table class="table table-dark table-hover">
