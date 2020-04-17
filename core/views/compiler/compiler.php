@@ -62,6 +62,8 @@ class Compiler
 
     foreach($model->gridElements['container'] as $key => $container){
 
+      print_r($container);
+
       echo '
       <div class="'.implode(', ', $container['class']).'">
       ';
