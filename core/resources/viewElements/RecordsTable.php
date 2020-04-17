@@ -21,7 +21,7 @@ class RecordsTable
     if($records = \Core\Models\Controller::getRepositories($this->model)){
 
       echo '
-      <div class="container">
+      <div class="container table-dark">
       <table class="table table-hover">
       <thead class="thead-dark">
       <tr>
