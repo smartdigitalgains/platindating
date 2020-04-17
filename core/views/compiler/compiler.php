@@ -114,6 +114,10 @@ class Compiler
 
     }
 
+    echo '</div>';
+
+    }
+
 
     echo'
     </body>
