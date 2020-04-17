@@ -1,9 +1,8 @@
-Options -Indexes
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
+
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 #Main Rule
-RewriteRule ^index.php$ - [L] 
 RewriteRule ^([A-Za-z0-9-]+)?$ index.php?a=$1 [NC,L,QSA]
