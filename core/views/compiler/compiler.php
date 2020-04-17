@@ -15,7 +15,22 @@ class Compiler
   static function compile($model)
   {
 
+    //RENDER TEMPLATE HEADER
+    echo '
+    <html>
+    ';
 
+    foreach($model->template->externalCss as $extCss){
+      echo "<link rel='stylesheet' href='".$extCss."' />";
+    }
+
+    echo'
+    </html>
+    <body>
+    ';
+
+
+    //RENDER VIEW ELEMENTS
     foreach($model->elements as $element){
 
       $reflect = \Core\Utilities::reflect($element);
@@ -33,6 +48,10 @@ class Compiler
       }
 
     }
+
+    echo '
+    </body>
+    ';
 
   }
 
