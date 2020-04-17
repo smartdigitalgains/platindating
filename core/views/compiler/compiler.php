@@ -76,7 +76,7 @@ class Compiler
         foreach($row['cols'] as $key => $col){
 
           echo '
-          <div class="col '.implode(', ', $col['classes']).'">
+          <div class="col '.implode(', ', $col['class']).'">
           ';
 
           foreach($col['elements'] as $element){
