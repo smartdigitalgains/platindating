@@ -38,11 +38,11 @@ class Query
 
       $seperator = ((array_key_last($fields) == $key) ? NULL : ',');
 
-      $stmt .= "'".$field."'".$seperator;
+      $stmt .= "".$field."".$seperator;
 
     }
 
-    echo $stmt .= "FROM ".$qb->get('prefix').'_'.lcfirst(\Core\Models\Controller::getShortName($model));
+    echo $stmt .= " FROM ".$qb->get('prefix').'_'.lcfirst(\Core\Models\Controller::getShortName($model));
 
     if($q = $qb->connect()->query($stmt)){
       return $q->fetchAll(\PDO::FETCH_ASSOC);
