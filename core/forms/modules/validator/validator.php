@@ -66,14 +66,14 @@ class Validator
         $.toast({
           title: "c0r3",
           content: "'.$e.'",
-          type: "info",
+          type: "warning",
           delay: 5000
         });
       })
       </script>
       ';
     }
-    
+
     unset($_SESSION['core']['forms']['validator']['errors']);
   }
 
