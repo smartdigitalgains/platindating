@@ -41,7 +41,7 @@ class Core
   static function loadExt()
   {
 
-    echo $dir = new RecursiveDirectoryIterator(dirname(__DIR__));
+    $dir = new RecursiveDirectoryIterator(dirname(__DIR__));
 
     foreach (new RecursiveIteratorIterator($dir) as $file) {
 
