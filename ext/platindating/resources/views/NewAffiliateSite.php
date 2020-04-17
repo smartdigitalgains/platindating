@@ -20,10 +20,14 @@ class NewAffiliateSite
     $this->template = new DefaultTemplate();
 
     $this->elements = [
-        new \Core\Resources\Forms\AffiliateSites(),
-        new RecordsTable([
-          "model" => "\Core\Resources\Forms\AffiliateSites"
-        ]),
+        [
+          [
+            new \Core\Resources\Forms\AffiliateSites(),
+            new RecordsTable([
+              "model" => "\Core\Resources\Forms\AffiliateSites"
+            ]),    
+          ]
+        ]
     ];
 
   }

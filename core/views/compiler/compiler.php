@@ -35,21 +35,46 @@ class Compiler
 
 
     //RENDER VIEW ELEMENTS
-    foreach($model->elements as $element){
+    foreach($model->elements as $rows){
 
-      $reflect = \Core\Utilities::reflect($element);
+      echo'
+      <div class"row>
+      ';
 
-      switch($reflect['namespaceName']){
 
-        case 'Core\Resources\ViewElements':
-          $element->render();
-        break;
+      foreach($rows as $col){
 
-        case 'Core\Resources\Forms':
-          \Core\Forms\Controller::render($element);
-        break;
+        echo '
+        <div class="col>
+        ';
+        
+        foreach($col as $element){
+
+          $reflect = \Core\Utilities::reflect($element);
+    
+          switch($reflect['namespaceName']){
+    
+            case 'Core\Resources\ViewElements':
+              $element->render();
+            break;
+    
+            case 'Core\Resources\Forms':
+              \Core\Forms\Controller::render($element);
+            break;
+    
+          }
+    
+        }    
+        
+        echo'
+        </div>
+        ';
 
       }
+
+      echo'
+      </div>
+      ';
 
     }
 
