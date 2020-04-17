@@ -14,7 +14,7 @@ class Core
 
       if (!is_dir($file)) {
 
-        if( fnmatch('*.php', $file) && !strpos($file, 'core.php')){
+        if( fnmatch('*.php', $file) && !strpos($file, 'c0r3.php')){
 
           $files[] = $file;
 
@@ -46,7 +46,7 @@ class Core
 
       if (!is_dir($file)) {
 
-        if( fnmatch('*.php', $file) && !strpos($file, 'core.php')){
+        if( fnmatch('*.php', $file) && !strpos($file, 'c0r3.php')){
 
           $files++;
 
