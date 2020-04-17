@@ -14,7 +14,7 @@ class Router
   function __construct()
   {
 
-    self::$routesNamespace = 'Core\Router\Routes';
+    self::$routesNamespace = 'Core\Resources\Routes';
     self::$action = (!empty($_GET['a'])) ?  $_GET['a'] : "/";
     self::$uid = (!empty($_GET['uid'])) ?  $_GET['uid'] : NULL;
 
