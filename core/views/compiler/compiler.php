@@ -63,13 +63,13 @@ class Compiler
     foreach($model->gridElements as $key => $container){
 
       echo '
-      <div class="'.implode(', ', $container['classes']).'">
+      <div class="'.implode(', ', $container['class']).'">
       ';
 
       foreach($container['rows'] as $key => $row){
 
         echo '
-        <div class="row '.implode(', ', $row['classes']).'">
+        <div class="row '.implode(', ', $row['class']).'">
         ';
 
 
