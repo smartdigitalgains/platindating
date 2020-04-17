@@ -60,9 +60,6 @@ class Compiler
     }
 
 
-    echo '<pre>';
-    print_r($model->gridElements); exit;
-
     foreach($model->gridElements as $key => $container){
 
 
@@ -73,7 +70,7 @@ class Compiler
       foreach($container['rows'] as $key => $row){
 
         echo '
-        <div class="row '.$container['class'].'">
+        <div class="row">
         ';
 
         foreach($row['cols'] as $key => $col){
