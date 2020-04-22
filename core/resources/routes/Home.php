@@ -19,7 +19,7 @@ class Home
   public function route()
   {
     
-    (new \Core\Views\Controller('\Core\Resources\Views\Home'))->render();
+    (new \Core\Compiler('\Core\Resources\Views\Home'))->compile();
 
   }
 

@@ -1,5 +1,5 @@
 <?php
-Namespace Core\Views\Modules;
+Namespace Core;
 
 /**
  *
@@ -11,7 +11,6 @@ class Compiler
 
   function __construct()
   {
-    // code...
   }
 
   static function compile($model)
@@ -22,7 +21,7 @@ class Compiler
     //RENDER TEMPLATE HEADER
     echo '
     <!doctype html>
-    <head lang="en">
+    <head lang="de">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     ';
@@ -111,6 +110,7 @@ class Compiler
         echo "<script src='".$extJs."'></script>";
       }  
     }
+
     if(isset(self::$model->template->internalJs) && !empty(self::$model->template->internalJs)){
       foreach(self::$model->template->internalJs as $extJs){
         echo "<script src='".$extJs."'></script>";
