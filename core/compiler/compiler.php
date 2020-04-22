@@ -77,7 +77,9 @@ class Compiler
     </body>
     ';
 
-    \Core\Notification::notify('forms');
+    if(isset($_SESSION['core']['notification'])){
+      \Core\Notification::notify('forms');
+    }
 
   }
 
