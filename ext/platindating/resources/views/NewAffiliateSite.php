@@ -19,7 +19,7 @@ class NewAffiliateSite
 
     $this->template = new DefaultTemplate();
 
-    $this->topElements = [
+    $this->navigation = [
       new Navigation()
     ];
 

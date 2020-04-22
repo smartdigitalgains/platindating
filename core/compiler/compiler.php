@@ -16,7 +16,7 @@ class Compiler
   static function compile($model)
   {
 
-    self::$model = $model;
+    self::$model = new $model;
 
     //RENDER TEMPLATE HEADER
     echo '
@@ -33,7 +33,7 @@ class Compiler
     <body>
     ';
 
-    self::render(self::$model->topElements);
+    self::render(self::$model->navigation);
 
     foreach(self::$model->gridElements as $key => $container){
 
