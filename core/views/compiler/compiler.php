@@ -107,17 +107,17 @@ class Compiler
   static function includeHeaderAssets()
   {
 
-    foreach(self::$model->externalJs as $extJs){
+    foreach(self::$model->template->externalJs as $extJs){
       echo "<script src='".$extJs."'></script>";
     }
-    foreach(self::$model->internalJs as $extJs){
+    foreach(self::$model->template->internalJs as $extJs){
       echo "<script src='".$extJs."'></script>";
     }
 
-    foreach(self::$model->externalCss as $extCss){
+    foreach(self::$model->template->externalCss as $extCss){
       echo "<link rel='stylesheet' href='".$extCss."' />";
     }
-    foreach(self::$model->internalCss as $extCss){
+    foreach(self::$model->template->internalCss as $extCss){
       echo "<link rel='stylesheet' href='".$extCss."' />";
     }
   } 
