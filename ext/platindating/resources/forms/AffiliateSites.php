@@ -82,10 +82,20 @@ class AffiliateSites
         "label" => "Bewertung",
         "restrictions" => [new Required()]
       ]),
-      new TextInput([
+      new SelectBox([
         "name" => "freeRegistration",
         "label" => "Registrierung kostenlos?",
-        "restrictions" => [new Required()]
+        "restrictions" => [new Required()],
+        "options" => [
+          [
+            "value" => '1',
+            "label" => 'Ja'
+          ],
+          [
+            "value" => '0',
+            "label" => 'Nein'
+          ],
+        ]
       ]),
       new TextInput([
         "name" => "ageOfUsers",

@@ -13,6 +13,8 @@ class SelectBox
 
   function __construct($settings = NULL)
   {
+
+    $this->options = (isset($settings['options']) ? $settings['options'] : NULL);
     $this->name = (isset($settings['name']) ? $settings['name'] : NULL);
     $this->label = (isset($settings['label']) ? $settings['label'] : NULL);
     $this->classes = (isset($settings['classes']) ? $settings['classes'] : NULL);
@@ -23,7 +25,10 @@ class SelectBox
   public function render($value)
   {
 
-    $repositories = \Core\Models\Controller::getRepositories($this->populate['model']);
+    if(isset($this->populate)){
+      $repositories = \Core\Models\Controller::getRepositories($this->populate['model']);
+    }
+
     echo '
     <div class="form-group">
       <label for="data['.$this->name.']">'.$this->label.'</label>
@@ -31,9 +36,14 @@ class SelectBox
         <option selected disabled>'.$this->label.'</option>
     ';
 
-    if(!empty($repositories)){
+    if(isset($repositories) && !empty($repositories)){
       foreach($repositories as $r){
         echo '<option '.(($value == $r['uid']) ? 'selected' : NULL).' value="'.$r['uid'].'">'.$r[$this->populate['label']].'</option>';
+      }
+    }
+    if(!empty($this->options)){
+      foreach($this->options as $o){
+        echo '<option '.(($value == $o['value']) ? 'selected' : NULL).' value="'.$o['value'].'">'.$o[['label']].'</option>';
       }
     }
 
