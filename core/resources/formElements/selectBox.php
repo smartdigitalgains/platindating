@@ -41,9 +41,9 @@ class SelectBox
         echo '<option '.(($value == $r['uid']) ? 'selected' : NULL).' value="'.$r['uid'].'">'.$r[$this->populate['label']].'</option>';
       }
     }
-    if(!empty($this->options)){
+    if(isset($this->options) && !empty($this->options)){
       foreach($this->options as $o){
-        echo '<option '.(($value == $o['value']) ? 'selected' : NULL).' value="'.$o['value'].'">'.$o[['label']].'</option>';
+        echo '<option '.(($value == $o['value']) ? 'selected' : NULL).' value="'.$o['value'].'">'.$o['label'].'</option>';
       }
     }
 
