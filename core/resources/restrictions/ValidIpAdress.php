@@ -15,9 +15,9 @@ class ValidIpAdress
   {
 
     if (!filter_var($data, FILTER_VALIDATE_IP)) {
-      $_SESSION['core']['notification']['errors']['forms'][] = 'Entered IP Adress is not a valid IP Adress';
+      $_SESSION['core']['notification']['forms'][] = 'Entered IP Adress is not a valid IP Adress';
     } 
-    
+
   }
 
 }

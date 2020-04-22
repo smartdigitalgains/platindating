@@ -16,7 +16,7 @@ class Required
 
     if(empty($data)){
 
-      $_SESSION['core']['notification']['errors']['forms'][] = $label.' should not be empty';
+      $_SESSION['core']['notification']['forms'][] = $label.' should not be empty';
 
     }
 

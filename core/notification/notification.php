@@ -6,7 +6,7 @@ class Notification
     static public function notify($group)
     {
 
-        foreach($_SESSION['core']['notification']['errors'][$group] as $e){
+        foreach($_SESSION['core']['notification'][$group] as $e){
             
             echo'
             <script>
@@ -22,7 +22,7 @@ class Notification
             ';
           }
       
-          unset($_SESSION['core']['notification']['errors'][$group]);
+          unset($_SESSION['core']['notification'][$group]);
 
     }
 }

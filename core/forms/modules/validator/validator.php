@@ -27,7 +27,7 @@ class Validator
 
     }
 
-    return ((isset($_SESSION['core']['forms']['validator']['errors']) > 0) ? false : true);
+    return ((isset($_SESSION['core']['notification']['forms']) > 0) ? false : true);
 
   }
 
@@ -52,7 +52,7 @@ class Validator
 
     }
 
-    return ((isset($_SESSION['core']['forms']['validator']['errors']) > 0) ? false : true);
+    return ((isset($_SESSION['core']['notification']['forms']) > 0) ? false : true);
 
   }
 
