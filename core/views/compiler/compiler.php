@@ -7,6 +7,8 @@ Namespace Core\Views\Modules;
 class Compiler
 {
 
+  private static $model;
+
   function __construct()
   {
     // code...
