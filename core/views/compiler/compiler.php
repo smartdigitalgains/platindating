@@ -18,7 +18,6 @@ class Compiler
   {
 
     self::$model = $model;
-    print_r(self::$model);
 
     //RENDER TEMPLATE HEADER
     echo '
@@ -107,19 +106,28 @@ class Compiler
   static function includeHeaderAssets()
   {
 
-    foreach(self::$model->template->externalJs as $extJs){
-      echo "<script src='".$extJs."'></script>";
+    if(isset(self::$model->template->externalJs) && !empty(self::$model->template->externalJs)){
+      foreach(self::$model->template->externalJs as $extJs){
+        echo "<script src='".$extJs."'></script>";
+      }  
     }
-    foreach(self::$model->template->internalJs as $extJs){
-      echo "<script src='".$extJs."'></script>";
+    if(isset(self::$model->template->internalJs) && !empty(self::$model->template->internalJs)){
+      foreach(self::$model->template->internalJs as $extJs){
+        echo "<script src='".$extJs."'></script>";
+      }  
     }
 
-    foreach(self::$model->template->externalCss as $extCss){
-      echo "<link rel='stylesheet' href='".$extCss."' />";
+    if(isset(self::$model->template->externalCss) && !empty(self::$model->template->externalCss)){
+      foreach(self::$model->template->externalCss as $extCss){
+        echo "<link rel='stylesheet' href='".$extCss."' />";
+      }  
     }
-    foreach(self::$model->template->internalCss as $extCss){
-      echo "<link rel='stylesheet' href='".$extCss."' />";
+    if(isset(self::$model->template->internalCss) && !empty(self::$model->template->internalCss)){
+      foreach(self::$model->template->internalCss as $extCss){
+        echo "<link rel='stylesheet' href='".$extCss."' />";
+      }    
     }
+
   } 
 
 
