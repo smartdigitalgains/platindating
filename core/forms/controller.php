@@ -46,10 +46,6 @@ class Controller
               Modules\Validator::finish($model);
 
             }
-            else{
-              \Core\Notification::notify('forms');
-            }
-
           }
 
         }

@@ -77,6 +77,8 @@ class Compiler
     </body>
     ';
 
+    \Core\Notification::notify('forms');
+
   }
 
 
