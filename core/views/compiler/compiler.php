@@ -15,6 +15,8 @@ class Compiler
   static function compile($model)
   {
 
+    self::$model = $model;
+
     //RENDER TEMPLATE HEADER
     echo '
     <!doctype html>
@@ -23,44 +25,16 @@ class Compiler
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     ';
 
-    foreach($model->template->externalJs as $extJs){
-      echo "<script src='".$extJs."'></script>";
-    }
-    foreach($model->template->internalJs as $extJs){
-      echo "<script src='".$extJs."'></script>";
-    }
-
-    foreach($model->template->externalCss as $extCss){
-      echo "<link rel='stylesheet' href='".$extCss."' />";
-    }
-    foreach($model->template->internalCss as $extCss){
-      echo "<link rel='stylesheet' href='".$extCss."' />";
-    }
+    self::includeHeaderAssets();
 
     echo'
     </head>
     <body>
     ';
 
-    foreach($model->topElements as $element){
+    self::render(self::$topElements);
 
-      $reflect = \Core\Utilities::reflect($element);
-
-      switch($reflect['namespaceName']){
-
-        case 'Core\Resources\ViewElements':
-          $element->render();
-        break;
-
-        case 'Core\Resources\Forms':
-          \Core\Forms\Controller::render($element);
-        break;
-
-      }
-    }
-
-
-    foreach($model->gridElements as $key => $container){
+    foreach(self::$gridElements as $key => $container){
 
 
       echo '
@@ -79,23 +53,7 @@ class Compiler
           <div class="col '.$col['class'].'">
           ';
 
-          foreach($col['elements'] as $element){
-
-            $reflect = \Core\Utilities::reflect($element);
-
-            switch($reflect['namespaceName']){
-
-              case 'Core\Resources\ViewElements':
-                $element->render();
-              break;
-
-              case 'Core\Resources\Forms':
-                \Core\Forms\Controller::render($element);
-              break;
-
-            }
-
-          }
+          self::render($col['elements']);
 
         echo'
         </div>
@@ -119,6 +77,47 @@ class Compiler
     ';
 
   }
+
+
+  public function render($elements)
+  {
+
+    foreach($elements as $element){
+
+      $reflect = \Core\Utilities::reflect($element);
+
+      switch($reflect['namespaceName']){
+
+        case 'Core\Resources\ViewElements':
+          $element->render();
+        break;
+
+        case 'Core\Resources\Forms':
+          \Core\Forms\Controller::render($element);
+        break;
+
+      }
+    }
+
+  }
+
+  public function includeHeaderAssets()
+  {
+    foreach(self::$externalJs as $extJs){
+      echo "<script src='".$extJs."'></script>";
+    }
+    foreach(self::$internalJs as $extJs){
+      echo "<script src='".$extJs."'></script>";
+    }
+
+    foreach(self::$externalCss as $extCss){
+      echo "<link rel='stylesheet' href='".$extCss."' />";
+    }
+    foreach(self::$internalCss as $extCss){
+      echo "<link rel='stylesheet' href='".$extCss."' />";
+    }
+  } 
+
 
 }
 
