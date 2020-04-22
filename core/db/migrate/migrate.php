@@ -43,7 +43,7 @@ class Migrate
     if(self::updateRepository()){
 
       //redirect to repository
-      $_SESSION['core']['forms']['messages'][] = 'Record was created.';
+      $_SESSION['core']['notification']['forms'][] = 'Record was created.';
 
     }
 
