@@ -81,7 +81,7 @@ class Compiler
   }
 
 
-  public function render($elements)
+  static function render($elements)
   {
 
     foreach($elements as $element){
@@ -103,19 +103,19 @@ class Compiler
 
   }
 
-  public function includeHeaderAssets()
+  static function includeHeaderAssets()
   {
-    foreach(self::$externalJs as $extJs){
+    foreach(self::$model->externalJs as $extJs){
       echo "<script src='".$extJs."'></script>";
     }
-    foreach(self::$internalJs as $extJs){
+    foreach(self::$model->internalJs as $extJs){
       echo "<script src='".$extJs."'></script>";
     }
 
-    foreach(self::$externalCss as $extCss){
+    foreach(self::$model->externalCss as $extCss){
       echo "<link rel='stylesheet' href='".$extCss."' />";
     }
-    foreach(self::$internalCss as $extCss){
+    foreach(self::$model->internalCss as $extCss){
       echo "<link rel='stylesheet' href='".$extCss."' />";
     }
   } 
