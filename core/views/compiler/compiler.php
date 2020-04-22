@@ -18,6 +18,7 @@ class Compiler
   {
 
     self::$model = $model;
+    print_r(self::$model);
 
     //RENDER TEMPLATE HEADER
     echo '
@@ -34,9 +35,9 @@ class Compiler
     <body>
     ';
 
-    self::render(self::$topElements);
+    self::render(self::$model->topElements);
 
-    foreach(self::$gridElements as $key => $container){
+    foreach(self::$model->gridElements as $key => $container){
 
 
       echo '
@@ -105,6 +106,7 @@ class Compiler
 
   static function includeHeaderAssets()
   {
+
     foreach(self::$model->externalJs as $extJs){
       echo "<script src='".$extJs."'></script>";
     }
