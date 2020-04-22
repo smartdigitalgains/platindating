@@ -52,7 +52,7 @@ class AffiliateSites
         "type" => "TEXT CHARACTER SET utf8 COLLATE utf8_bin"
       ],
       [
-        "column" => "plattformHasAds",
+        "column" => "platformHasAds",
         "type" => "TEXT CHARACTER SET utf8 COLLATE utf8_bin"
       ],
       [
@@ -110,10 +110,20 @@ class AffiliateSites
             new IsInt()
         ]
       ]),
-      new TextInput([
-        "name" => "plattformHasAds",
+      new SelectBox([
+        "name" => "platformHasAds",
         "label" => "Zeigt die Plattform Werbung an?",
-        "restrictions" => [new Required()]
+        "restrictions" => [new Required()],
+        "options" => [
+          [
+            "value" => '1',
+            "label" => 'Ja'
+          ],
+          [
+            "value" => '0',
+            "label" => 'Nein'
+          ],
+        ]
       ]),
       new TextInput([
         "name" => "categories",
