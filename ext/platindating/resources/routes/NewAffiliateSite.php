@@ -19,7 +19,7 @@ class NewAffiliateSite
   public function route()
   {
   
-    (new \Core\Compiler('\Core\Resources\Views\NewAffiliateSite'))->compile();
+    \Core\Compiler::compile('\Core\Resources\Views\NewAffiliateSite');
 
   }
 
