@@ -47,7 +47,7 @@ class Controller
 
             }
             else{
-              Modules\Validator::errorInfo();
+              \Core\Notification::notify('forms');
             }
 
           }

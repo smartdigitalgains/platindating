@@ -16,7 +16,7 @@ class IsInt
 
     if(is_int($data)){
 
-      $_SESSION['core']['forms']['validator']['errors'][] = $label.' should be integer';
+      $_SESSION['core']['notification']['errors']['forms'][] = $label.' should be integer';
 
     }
 

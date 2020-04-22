@@ -56,27 +56,6 @@ class Validator
 
   }
 
-  static function errorInfo()
-  {
-    foreach($_SESSION['core']['forms']['validator']['errors'] as $e){
-      
-      echo'
-      <script>
-      $(document).ready(function(){
-        $.toast({
-          title: "c0r3",
-          content: "'.$e.'",
-          type: "warning",
-          delay: 5000
-        });
-      })
-      </script>
-      ';
-    }
-
-    unset($_SESSION['core']['forms']['validator']['errors']);
-  }
-
 }
 
 ?>

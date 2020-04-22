@@ -14,13 +14,10 @@ class ValidIpAdress
   function execute($data, $label)
   {
 
-    if (filter_var($data, FILTER_VALIDATE_IP)) {
-        return True;
+    if (!filter_var($data, FILTER_VALIDATE_IP)) {
+      $_SESSION['core']['notification']['errors']['forms'][] = 'Entered IP Adress is not a valid IP Adress';
     } 
-    else{
-        $_SESSION['core']['forms']['validator']['errors'][] = 'Entered IP Adress is not a valid IP Adress';
-        return False;
-    }
+    
   }
 
 }
