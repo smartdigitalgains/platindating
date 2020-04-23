@@ -34,6 +34,7 @@ class Router
   static function setSession()
   {
 
+    unset($_SESSION['core']['router']['uid']);
     unset($_SESSION['routes']);
     unset($_SESSION['forms']);
 
