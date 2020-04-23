@@ -5,7 +5,6 @@ use Core\Resources\Templates\DefaultTemplate;
 use Core\Resources\ViewElements\WelcomeMessage;
 use Core\Resources\ViewElements\Navigation;
 use Core\Resources\ViewElements\Login;
-use Core\Resources\ViewElements\RecordsTable;
 use Core\Resources\ViewElements\Sidebar;
 
 /**
@@ -42,17 +41,6 @@ class Record
               "class" => "p-3 bg-light ",
               "elements" => [
                 new $form
-              ]
-            ],
-            [
-              "class" => "p-3",
-              "elements" => [
-                new RecordsTable([
-                  "model" => "\Core\Resources\Forms\AffiliateSites",
-                  "fields" => ["uid", "title"],
-                  "showFields" => ["title"]
-                ]),
-
               ]
             ],
           ]
