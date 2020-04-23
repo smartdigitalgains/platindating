@@ -36,7 +36,9 @@ class RecordsTable
       ';
 
       foreach($records[0] as $key => $val){
-        echo '<td>'.$key.'</td>';
+        if(in_array($key, $this->showFields)){
+          echo '<td>'.$key.'</td>';
+        }
       }
 
       echo'
