@@ -16,7 +16,7 @@ class FormsTable
   {
 
     echo '
-    <div class="container table-responsive">
+    <div class="table-responsive">
     <h2>Forms</h2>
     <table class="table table-hover">
     <thead class="thead-dark">
