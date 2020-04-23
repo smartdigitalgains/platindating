@@ -21,7 +21,9 @@ class RecordsTable
   {
 
     if($records = \Core\Db\Query::select($this->model, $this->fields)){
-
+      echo '<pre>';
+      print_r($records);
+      echo '</pre>';
       echo '
       <div class="card table-responsive">
       <div class="card-header">
@@ -51,7 +53,7 @@ class RecordsTable
 
         echo '
         <td>
-          <button type="button" class="btn btn-primary">Bearbeiten</button>
+          <a href="/form/'.\Core\Resources\Controller::getShortName($this->model).'"><button type="button" class="btn btn-primary">Bearbeiten</button></a>
           <button type="button" class="btn btn-danger">Löschen</button>
         </td>
         ';
