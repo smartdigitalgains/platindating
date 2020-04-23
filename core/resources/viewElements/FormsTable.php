@@ -16,8 +16,8 @@ class FormsTable
   {
 
     echo '
-    <div class="table-responsive">
-    <h2>Forms</h2>
+    <div class="card table-responsive">
+    <div class="card-header">Forms</div>
     <table class="table table-hover">
     <thead class="thead-dark">
     <tr>
