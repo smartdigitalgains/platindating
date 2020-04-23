@@ -14,6 +14,7 @@ class Form
   {
     $this->slug = "form";
     $this->label = "Forms";
+    $this->enableInNavigation = FALSE;
   }
 
   public function route()

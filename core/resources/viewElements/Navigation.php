@@ -25,7 +25,9 @@ class Navigation
     ';
     
     foreach ($_SESSION['routes'] as  $route) {
-      echo '<li class="nav-item active"><a class="nav-link" href="/'.$route->slug.'/">'.$route->label.'</a></li>';
+      if($route->enableInNavigation){
+        echo '<li class="nav-item active"><a class="nav-link" href="/'.$route->slug.'/">'.$route->label.'</a></li>';
+      }
     }
     
     echo'
