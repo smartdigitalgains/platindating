@@ -24,6 +24,7 @@ class Router
   {
 
     unset($_SESSION['routes']);
+    unset($_SESSION['forms']);
 
     foreach(\get_declared_classes() as $key => $route){
 

@@ -15,10 +15,6 @@ use \Core\Resources\Finishers\DefaultFinisher;
 class AffiliateSites
 {
 
-  private $label;
-  private $setup;
-  private $migration;
-  public $data;
 
   function __construct()
   {
