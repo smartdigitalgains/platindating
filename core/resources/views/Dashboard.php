@@ -42,16 +42,6 @@ class Dashboard
                 new \Core\Resources\Forms\AffiliateSites(),
               ]
             ],
-            [
-              "class" => "p-3",
-              "elements" => [
-                new RecordsTable([
-                  "model" => "\Core\Resources\Forms\AffiliateSites",
-                  "fields" => ["title"]
-                ]),
-
-              ]
-            ],
           ]
         ],
       ]

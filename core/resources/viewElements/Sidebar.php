@@ -15,7 +15,7 @@ class Sidebar
   public function render(){
 
     echo '
-    <div class="sidebar-sticky">
+    <div class="position-fixed">
       <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link active" href="#">
