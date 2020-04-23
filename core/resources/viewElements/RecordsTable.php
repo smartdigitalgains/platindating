@@ -22,9 +22,6 @@ class RecordsTable
   {
 
     if($records = \Core\Db\Query::select($this->model, $this->fields)){
-      echo '<pre>';
-      print_r($records);
-      echo '</pre>';
       echo '
       <div class="card table-responsive">
       <div class="card-header">
