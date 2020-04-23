@@ -14,6 +14,7 @@ class RecordsTable
     $this->model = new $data['model'];
     $this->actions = ((isset($data['actions']) ) ? $data['actions'] : NULL);
     $this->fields = ((isset($data['fields']) ) ? $data['fields'] : NULL);
+    $this->showFields = ((isset($data['showFields']) ) ? $data['showFields'] : NULL);
     $this->opttions = ((isset($data['options']) ) ? $data['options'] : NULL);
   }
 
@@ -48,7 +49,9 @@ class RecordsTable
       foreach($records as $column){
         echo '<tr>';
         foreach ($column as $key => $val) {
-          echo '<td>'.$val.'</td>';
+          if(in_array($key, $this->showFields)){
+            echo '<td>'.$val.'</td>';
+          }
         }
 
         echo '
