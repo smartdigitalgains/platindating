@@ -22,10 +22,6 @@ class Record
       new Navigation()
     ];
 
-    if(isset($_GET['uid']))
-
-    $record = "\Core\Resources\Forms\\".$_SESSION['core']['router']['uid'];
-
     $this->gridElements = [
       "container" => [
         "class" => "container-fluid",
