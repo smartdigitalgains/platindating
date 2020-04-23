@@ -49,6 +49,28 @@ class Query
     }
   }
 
+  static function selectSingle($model, $uid, $fields)
+  {
+    $qb = new \Core\Connection();
+
+    $stmt = "SELECT ";
+
+    foreach($fields as $key => $field){
+
+      $seperator = ((array_key_last($fields) == $key) ? NULL : ',');
+
+      $stmt .= "".$field."".$seperator;
+
+    }
+
+    $stmt .= " FROM ".$qb->get('prefix').'_'.lcfirst(\Core\Models\Controller::getShortName($model));
+    $stmt .= " WHERE uid = ".$uid;
+
+    if($q = $qb->connect()->query($stmt)){
+      return $q->fetchAll(\PDO::FETCH_ASSOC);
+    }
+  }
+
 }
 
 ?>

@@ -54,6 +54,13 @@ class Controller
 
       Modules\Messages::show();
 
+      if(isset($_SESSION['core']['router']['rid'])){
+
+        $data = \Core\Db\Query::selectSingle($model, $_SESSION['core']['router']['rid'], ["*"]);
+        \Core\Models\Controller::set($model, 'data',  $data);
+
+      }
+
       Modules\Builder::build($model);
 
     }
