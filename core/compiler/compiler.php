@@ -33,45 +33,55 @@ class Compiler
     <body>
     ';
 
-    self::render(self::$model->navigation);
+    if(isset(self::$model->navigation) && !empty(self::$model->navigation)){
+      self::render(self::$model->navigation);
+    }
 
-    foreach(self::$model->gridElements as $key => $container){
+    if(isset(self::$model->gridElements) && !empty(self::$model->gridElements)){
 
+      foreach(self::$model->gridElements as $key => $container){
 
-      echo '
-      <div class="'.$container['class'].'">
-      ';
-
-      foreach($container['rows'] as $key => $row){
 
         echo '
-        <div class="row">
+        <div class="'.$container['class'].'">
         ';
+  
+        if(isset($container['rows']) && !empty($container['rows'])){
 
-        foreach($row as $key => $col){
-
-          echo '
-          <div class="col '.$col['class'].'">
+          foreach($container['rows'] as $key => $row){
+  
+            echo '
+            <div class="row">
+            ';
+    
+            foreach($row as $key => $col){
+    
+              echo '
+              <div class="col '.$col['class'].'">
+              ';
+    
+              self::render($col['elements']);
+    
+            echo'
+            </div>
+            ';
+    
+          }
+    
+          echo'
+          </div>
           ';
+    
 
-          self::render($col['elements']);
-
-        echo'
-        </div>
-        ';
+        }
 
       }
-
-      echo'
-      </div>
-      ';
-
-    }
-
-    echo '</div>';
+  
+      echo '</div>';
+  
+      }  
 
     }
-
 
     echo'
     </body>

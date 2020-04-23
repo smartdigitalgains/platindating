@@ -14,6 +14,7 @@ class RecordsTable
     $this->model = new $data['model'];
     $this->actions = ((isset($data['actions']) ) ? $data['actions'] : NULL);
     $this->fields = ((isset($data['fields']) ) ? $data['fields'] : NULL);
+    $this->opttions = ((isset($data['options']) ) ? $data['options'] : NULL);
   }
 
   public function render()
