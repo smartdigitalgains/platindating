@@ -21,7 +21,7 @@ class Form
   public function route()
   {
    
-    if(isset($_GET['uid'])){
+    if(isset($_SESSION['core']['router']['uid'])){
       \Core\Compiler::compile('\Core\Resources\Views\Dashboard');
     }
     else{

@@ -20,9 +20,21 @@ class Router
 
   }
 
-  static function loadRoutes()
+  static function checkIfRouteExists(){
+
+    foreach($_SESSION['routes'] as $route){
+      if(self::$action == $route->slug){
+        self::$activeRoute = $route;
+        return true;
+      }
+    }
+
+  }
+
+  static function setSession()
   {
 
+    print_r($_GET);
     unset($_SESSION['routes']);
     unset($_SESSION['forms']);
 
@@ -42,21 +54,12 @@ class Router
 
     }
 
-  }
-
-  static function checkIfRouteExists(){
-
-    foreach($_SESSION['routes'] as $route){
-      if(self::$action == $route->slug){
-        self::$activeRoute = $route;
-        return true;
-      }
+    //Set UID
+    if(isset($_GET['uid'])){
+      $_SESSION['core']['router']['uid'] = $_GET['uid'];
     }
 
-  }
 
-  static function setSession()
-  {
     //last route
     if (!isset($_SESSION['core']['router']['referrer'])) {
         $_SESSION['core']['router']['lastRoute'] = $_SERVER['REQUEST_URI'];
