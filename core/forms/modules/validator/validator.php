@@ -40,7 +40,7 @@ class Validator
 
         foreach($element->restrictions as $restriction){
 
-          $data = (isset(($model->get('data'))['data'][$element->name]) ? ($model->get('data'))['data'][$element->name] : NULL);
+          $data = (isset(($model->get('data'))[$element->name]) ? ($model->get('data'))[$element->name] : NULL);
 
           $restriction->execute($data, $element->label);
 
