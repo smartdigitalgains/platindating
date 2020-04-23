@@ -80,8 +80,6 @@ class Router
   static function route()
   {
 
-    self::loadRoutes();
-
     self::setSession();
 
     if(self::checkIfRouteExists()){
