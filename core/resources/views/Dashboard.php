@@ -6,7 +6,7 @@ use Core\Resources\ViewElements\WelcomeMessage;
 use Core\Resources\ViewElements\Navigation;
 use Core\Resources\ViewElements\Sidebar;
 use Core\Resources\ViewElements\Login;
-use Core\Resources\ViewElements\RecordsTable;
+use Core\Resources\ViewElements\FormsTable;
 use Core\Resources\ViewElements\BackLink;
 
 /**
@@ -39,7 +39,7 @@ class Dashboard
             [
               "class" => "p-3 bg-light ",
               "elements" => [
-                new \Core\Resources\Forms\AffiliateSites(),
+                new FormsTable(),
               ]
             ],
           ]

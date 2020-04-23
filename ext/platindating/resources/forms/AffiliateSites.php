@@ -15,12 +15,18 @@ use \Core\Resources\Finishers\DefaultFinisher;
 class AffiliateSites
 {
 
+  private $label;
+  private $description;
   private $setup;
   private $migration;
   public $data;
 
   function __construct()
   {
+
+    $this->label = 'Affiliate Sites';
+
+    $this->description = ""
 
     $this->schema = [
       [
