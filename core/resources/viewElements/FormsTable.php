@@ -30,7 +30,7 @@ class Navigation
     foreach($_SESSION['forms'] as $form){
       echo '
       <tr>
-        <td>'.$form['label'].'</td>
+        <td>'.$form->label.'</td>
       <td>
         <button type="button" class="btn btn-primary">Öffnen</button>
       </td>
