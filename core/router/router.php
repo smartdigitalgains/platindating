@@ -58,6 +58,11 @@ class Router
       $_SESSION['core']['router']['uid'] = $_GET['uid'];
     }
 
+    //Set RID
+    if(isset($_GET['rid'])){
+      $_SESSION['core']['router']['rid'] = $_GET['rid'];
+    }
+
 
     //last route
     if (!isset($_SESSION['core']['router']['referrer'])) {
