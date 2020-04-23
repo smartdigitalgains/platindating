@@ -6,7 +6,7 @@ use Core\Resources\ViewElements\WelcomeMessage;
 use Core\Resources\ViewElements\Navigation;
 use Core\Resources\ViewElements\Login;
 use Core\Resources\ViewElements\RecordsTable;
-use Core\Resources\ViewElements\BackLink;
+use Core\Resources\ViewElements\Sidebar;
 
 /**
  *
