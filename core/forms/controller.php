@@ -32,7 +32,7 @@ class Controller
 
       if(isset($_POST) && !empty($_POST) && $_POST['submit'] == \Core\Models\Controller::getShortName($model)){
 
-        \Core\Models\Controller::set($model, 'data',  $_POST);
+        \Core\Models\Controller::set($model, 'data',  $_POST['data']);
 
         if($t = (isset($_POST['token'])) ?  $_POST['token'] : FALSE){
 
