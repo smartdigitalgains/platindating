@@ -21,7 +21,7 @@ class Form
   public function route()
   {
    
-    if(isset($_SESSION['core']['router']['uid']) && $_SESSION['core']['router']['rid']){
+    if(isset($_SESSION['core']['router']['uid']) && isset($_SESSION['core']['router']['rid'])){
       \Core\Compiler::compile('\Core\Resources\Views\Record');
     }
     elseif(isset($_SESSION['core']['router']['uid'])){
