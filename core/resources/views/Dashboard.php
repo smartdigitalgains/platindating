@@ -31,7 +31,7 @@ class Dashboard
         [
           "cols" => [
             [
-              "class" => "p-3 bg-light ",
+              "class" => "col-md-2 d-none d-md-block bg-light sidebar",
               "elements" => [
                 new Sidebar(),
               ]
