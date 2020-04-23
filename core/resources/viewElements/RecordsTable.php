@@ -77,7 +77,7 @@ class RecordsTable
     }
     else{
       echo'
-      <div class="alert alert-dark" role="alert">
+      <div class="alert alert-dark text-center" role="alert">
         no records available
       </div>      
     ';
