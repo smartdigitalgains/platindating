@@ -35,6 +35,7 @@ class Router
   {
 
     unset($_SESSION['core']['router']['uid']);
+    unset($_SESSION['core']['router']['rid']);
     unset($_SESSION['routes']);
     unset($_SESSION['forms']);
 
