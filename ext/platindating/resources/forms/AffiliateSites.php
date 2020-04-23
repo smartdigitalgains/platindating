@@ -16,7 +16,6 @@ class AffiliateSites
 {
 
   private $label;
-  private $description;
   private $setup;
   private $migration;
   public $data;
@@ -25,8 +24,6 @@ class AffiliateSites
   {
 
     $this->label = 'Affiliate Sites';
-
-    $this->description = ""
 
     $this->schema = [
       [
