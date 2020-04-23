@@ -59,6 +59,7 @@ class Router
       $_SESSION['core']['router']['uid'] = $_GET['uid'];
     }
 
+    print_r($_SESSION['core']['router']['uid']);
 
     //last route
     if (!isset($_SESSION['core']['router']['referrer'])) {
