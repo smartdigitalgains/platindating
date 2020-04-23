@@ -4,7 +4,7 @@ Namespace Core\Resources\Routes;
 /**
  *
  */
-class Home
+class Form
 {
 
   public $slug;
