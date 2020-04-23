@@ -36,7 +36,6 @@ class Dashboard
                 new Sidebar(),
               ]
             ],
-          "cols" => [
             [
               "class" => "p-3 bg-light ",
               "elements" => [
