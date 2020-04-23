@@ -67,7 +67,7 @@ class Query
     $stmt .= " WHERE uid = ".$uid;
 
     if($q = $qb->connect()->query($stmt)){
-      return $q->fetchAll(\PDO::FETCH_ASSOC);
+      return $q->fetch(\PDO::FETCH_ASSOC);
     }
   }
 
