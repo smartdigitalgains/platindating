@@ -57,6 +57,9 @@ class Controller
       if(isset($_SESSION['core']['router']['rid'])){
 
         $data = \Core\Db\Query::selectSingle($model, $_SESSION['core']['router']['rid'], ["*"]);
+
+        print_r($data);
+
         \Core\Models\Controller::set($model, 'data',  $data);
 
       }
