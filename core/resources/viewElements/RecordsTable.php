@@ -23,7 +23,10 @@ class RecordsTable
     if($records = \Core\Db\Query::select($this->model, $this->fields)){
 
       echo '
-      <div class="container table-responsive">
+      <div class="container card table-responsive">
+      <div class="card-header">
+        Records
+      </div>
       <table class="table table-hover">
       <thead class="thead-dark">
       <tr>
