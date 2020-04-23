@@ -9,6 +9,7 @@ class Form
 
   public $slug;
   public $label;
+  public $enableInNavigation;
 
   function __construct()
   {
