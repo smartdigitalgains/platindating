@@ -22,10 +22,10 @@ class Form
   {
    
     if(isset($_SESSION['core']['router']['uid'])){
-      \Core\Compiler::compile('\Core\Resources\Views\Dashboard');
+      \Core\Compiler::compile('\Core\Resources\Views\Form');
     }
     else{
-      \Core\Compiler::compile('\Core\Resources\Views\Form');
+      \Core\Compiler::compile('\Core\Resources\Views\Dashboard');
     }
 
   }

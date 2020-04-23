@@ -23,6 +23,11 @@ class Form
       new Navigation()
     ];
 
+    if(isset($_GET['uid']))
+
+    $formId = $_SESSION['core']['router']['uid'];
+    $form = "\Core\Resources\Forms\\".$formId;
+
     $this->gridElements = [
       "container" => [
         "class" => "container-fluid",
@@ -37,7 +42,7 @@ class Form
             [
               "class" => "p-3 bg-light ",
               "elements" => [
-                new \Core\Resources\Forms\AffiliateSites(),
+                new $form
               ]
             ],
             [
