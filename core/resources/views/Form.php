@@ -51,7 +51,7 @@ class Form
                 new RecordsTable([
                   "model" => "\Core\Resources\Forms\AffiliateSites",
                   "fields" => ["uid", "title"],
-                  "showFields" => ["title"]
+                  "showFields" => array("title")
                 ]),
 
               ]
