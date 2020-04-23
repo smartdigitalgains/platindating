@@ -62,6 +62,9 @@ class RecordsTable
       echo'
         </tbody>
       </table>
+      <div class="card-footer text-muted">
+        ('.count($records).') Records
+      </div>
       </div>
       ';
 
