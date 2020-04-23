@@ -29,6 +29,12 @@ class Form
         "rows" => [
           "cols" => [
             [
+              "class" => "col-md-2 d-none d-md-block bg-lightpush sidebar p-3",
+              "elements" => [
+                new Sidebar(),
+              ]
+            ],
+            [
               "class" => "p-3 bg-light ",
               "elements" => [
                 new \Core\Resources\Forms\AffiliateSites(),
