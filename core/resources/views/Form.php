@@ -50,7 +50,8 @@ class Form
               "elements" => [
                 new RecordsTable([
                   "model" => "\Core\Resources\Forms\AffiliateSites",
-                  "fields" => ["title"]
+                  "fields" => ["uid", "title"],
+                  "showFields" => ["title"]
                 ]),
 
               ]
