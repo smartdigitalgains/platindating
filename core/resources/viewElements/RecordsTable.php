@@ -20,8 +20,10 @@ class RecordsTable
 
   public function render()
   {
+    
+    $records = \Core\Db\Query::select($this->model, $this->fields);
 
-    if($records = \Core\Db\Query::select($this->model, $this->fields)){
+    if(!empty($records)){
       echo '
       <div class="card table-responsive">
       <div class="card-header">
@@ -72,6 +74,13 @@ class RecordsTable
       </div>
       ';
 
+    }
+    else{
+      echo'
+      <div class="mx-auto">
+        no records available
+      </div>
+      ';
     }
 
 
