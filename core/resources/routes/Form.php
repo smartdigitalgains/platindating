@@ -21,7 +21,12 @@ class Form
   public function route()
   {
    
-    \Core\Compiler::compile('\Core\Resources\Views\Form');
+    if(isset($_GET['uid'])){
+      \Core\Compiler::compile('\Core\Resources\Views\Dashboard');
+    }
+    else{
+      \Core\Compiler::compile('\Core\Resources\Views\Form');
+    }
 
   }
 
