@@ -4,7 +4,7 @@ Namespace Core\Resources\ViewElements;
 /**
  *
  */
-class FormsTable
+class Navigation
 {
 
   function __construct()
