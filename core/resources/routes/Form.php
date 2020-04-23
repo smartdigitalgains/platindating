@@ -13,12 +13,12 @@ class Form
   function __construct()
   {
     $this->slug = "form";
-    $this->label = "Form";
+    $this->label = "Forms";
   }
 
   public function route()
   {
-    
+   
     \Core\Compiler::compile('\Core\Resources\Views\Form');
 
   }

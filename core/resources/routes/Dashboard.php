@@ -4,7 +4,7 @@ Namespace Core\Resources\Routes;
 /**
  *
  */
-class Home
+class Dashboard
 {
 
   public $slug;
@@ -13,13 +13,13 @@ class Home
   function __construct()
   {
     $this->slug = "/";
-    $this->label = "Home";
+    $this->label = "Dashboard";
   }
 
   public function route()
   {
     
-    \Core\Compiler::compile('\Core\Resources\Views\Home');
+    \Core\Compiler::compile('\Core\Resources\Views\Dashboard');
 
   }
 

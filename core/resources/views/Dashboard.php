@@ -4,6 +4,7 @@ Namespace Core\Resources\Views;
 use Core\Resources\Templates\DefaultTemplate;
 use Core\Resources\ViewElements\WelcomeMessage;
 use Core\Resources\ViewElements\Navigation;
+use Core\Resources\ViewElements\Sidebar;
 use Core\Resources\ViewElements\Login;
 use Core\Resources\ViewElements\RecordsTable;
 use Core\Resources\ViewElements\BackLink;
@@ -11,7 +12,7 @@ use Core\Resources\ViewElements\BackLink;
 /**
  *
  */
-class NewAffiliateSite
+class Dashboard
 {
 
   function __construct()
@@ -26,10 +27,18 @@ class NewAffiliateSite
     $this->gridElements = [
       "container" => [
         "class" => "container-fluid",
-        "rows" => [
+        "rows" => 
+        [
           "cols" => [
             [
-              "class" => "p-3 bg-light",
+              "class" => "p-3 bg-light ",
+              "elements" => [
+                new Sidebar(),
+              ]
+            ],
+          "cols" => [
+            [
+              "class" => "p-3 bg-light ",
               "elements" => [
                 new \Core\Resources\Forms\AffiliateSites(),
               ]
@@ -45,7 +54,7 @@ class NewAffiliateSite
               ]
             ],
           ]
-        ]
+        ],
       ]
     ];
 

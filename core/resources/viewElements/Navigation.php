@@ -7,8 +7,6 @@ Namespace Core\Resources\ViewElements;
 class Navigation
 {
 
-  private $routes;
-
   function __construct()
   {
 
