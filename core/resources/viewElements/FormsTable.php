@@ -32,7 +32,7 @@ class FormsTable
       <tr>
         <td>'.$form->label.'</td>
       <td>
-        <button type="button" class="btn btn-primary">Öffnen</button>
+        <a href="/form/'.\Core\Models\Controller::getShortName($form).'"><button type="button" class="btn btn-primary">Öffnen</button></a>
       </td>
       </tr>
       ';
