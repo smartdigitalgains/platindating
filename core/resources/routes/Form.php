@@ -24,7 +24,7 @@ class Form
     if(isset($_SESSION['core']['router']['uid'])){
       \Core\Compiler::compile('\Core\Resources\Views\Form');
     }
-    elseif($_SESSION['core']['router']['rid']){
+    elseif(isset($_SESSION['core']['router']['uid']) && $_SESSION['core']['router']['rid']){
       \Core\Compiler::compile('\Core\Resources\Views\Record');
     }
     else{
