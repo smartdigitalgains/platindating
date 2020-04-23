@@ -56,7 +56,7 @@ class RecordsTable
 
         echo '
         <td>
-          <a href="/form/'.\Core\Resources\Controller::getShortName($this->model).'"><button type="button" class="btn btn-primary">Bearbeiten</button></a>
+          <a href="/form/'.\Core\Models\Controller::getShortName($this->model).'"><button type="button" class="btn btn-primary">Bearbeiten</button></a>
           <button type="button" class="btn btn-danger">Löschen</button>
         </td>
         ';
