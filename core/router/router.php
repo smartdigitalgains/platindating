@@ -33,6 +33,12 @@ class Router
 
       }
 
+      if(strpos($route, '\Core\Resources\Forms') === 0){
+
+        $_SESSION['forms'][] = new $route;
+
+      }
+
     }
 
   }
