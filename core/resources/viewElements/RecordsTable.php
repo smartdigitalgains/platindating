@@ -77,10 +77,10 @@ class RecordsTable
     }
     else{
       echo'
-      <div class="mx-auto">
+      <div class="alert alert-dark" role="alert">
         no records available
-      </div>
-      ';
+      </div>      
+    ';
     }
 
 
