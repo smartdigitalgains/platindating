@@ -13,7 +13,7 @@ class Dashboard
 
   function __construct()
   {
-    $this->slug = "/";
+    $this->slug = "c0r3";
     $this->label = "Dashboard";
     $this->enableInNavigation = TRUE;
   }
