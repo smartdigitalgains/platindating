@@ -17,7 +17,7 @@ class Builder
   {
 
     echo '
-    <div class="container">
+    <div class="container sticky-top">
     <form action="'.$_SERVER['REQUEST_URI'].'" method="post">';
 
     //Set Cross Site Security Token
