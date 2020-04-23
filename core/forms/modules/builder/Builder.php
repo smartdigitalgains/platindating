@@ -26,6 +26,8 @@ class Builder
     //Render Form Model Elements
     foreach(\Core\Models\Controller::get($model, 'elements') as $key => $element){
 
+      print_r(\Core\Models\Controller::get($model, 'data')); exit;
+
       $element->render(
         ((isset(\Core\Models\Controller::get($model, 'data')['data'][$element->name]))
         ?
